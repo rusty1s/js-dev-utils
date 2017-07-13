@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "transpile": "node ../scripts/babel.js -- src",
-    "lint": "node ../scripts/eslint.js -- src/** --ext .js --ext .jsx --cache"
+    "lint:js": "node ../scripts/eslint.js -- src/** --ext .js --ext .jsx --cache",
+    "lint:css": "node ../scripts/stylelint.js -- src/**/*.css"
   },
   "dependencies": {
     "prop-types": "^15.5.10",

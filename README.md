@@ -1,10 +1,10 @@
 # React Development Scripts
 
-```shell
+```sh
 yarn add --dev react-dev-scripts
 ```
 
-```shell
+```sh
 npm install --save-dev react-dev-scripts
 ```
 

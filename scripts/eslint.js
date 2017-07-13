@@ -12,5 +12,4 @@ const config = resolve('eslintrc');
 const filepath = path.join(getRoot(), '.eslintrc');
 fs.writeFileSync(filepath, toJSON(config));
 const code = run('eslint', getArgs());
-// Don't unlink the file, so one can use the power of the .eslintrc.
 process.exit(code);
