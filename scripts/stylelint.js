@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+console.log(process.argv);
 
 const resolve = require('../helper/resolve');
 const { getRoot, getArgs } = require('../helper/process');
