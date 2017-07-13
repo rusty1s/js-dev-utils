@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "transpile": "node ../scripts/babel.js -- src",
+    "lint": "node ../scripts/eslint.js -- src/** --ext .js --ext .jsx --cache"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "react-dev-scripts": "link:.."
+  }
+}

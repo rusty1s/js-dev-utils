@@ -1,0 +1,8 @@
+module.exports = {
+  extends: 'airbnb',
+  env: {
+    node: true,
+    browser: true,
+    jest: true,
+  },
+};
