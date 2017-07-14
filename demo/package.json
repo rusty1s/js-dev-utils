@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
+    "postinstall": "dev-utils postinstall",
     "transpile": "dev-utils babel src",
     "lint:js": "dev-utils eslint . --fix",
-    "lint:css": "dev-utils stylelints **/*.css"
+    "lint:css": "dev-utils stylelint **/*.css"
   },
   "dependencies": {
     "prettier": "^1.5.2",
