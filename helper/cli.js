@@ -8,17 +8,23 @@ const { getRoot } = require("./resolve");
 const getArgs = () => process.argv.slice(2);
 
 const mergeArgs = (...args) => {
+  // Merge all arguments.
   const merged = Object.assign(...args.map(a => parse(a)));
-  console.log(merged);
 
   return Object.keys(merged).reduce((acc, key) => {
+    let k = key;
     const value = merged[key];
+
+    // Pass values with no given key.
     if (key === "_") return [...acc, ...value];
 
-    let k = key;
+    // Invert argument if the value is `false`.
     if (typeof value === "boolean" && !value) k = `no-${k}`;
 
+    // Prepend - or -- to key to reconstruct arguments.
     k = k.length === 1 ? `-${k}` : `--${k}`;
+
+    // Construct single or value argument.
     const arg = typeof value === "boolean" ? [k] : [k, value];
     return [...acc, ...arg];
   }, []);
