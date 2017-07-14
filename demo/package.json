@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "transpile": "node ../scripts/babel.js src",
-    "lint:js": "node ../scripts/eslint.js . --fix",
-    "lint:css": "node ../scripts/stylelint.js **/*.css"
+    "transpile": "dev-utils babel src",
+    "lint:js": "dev-utils eslint . --fix",
+    "lint:css": "dev-utils stylelints **/*.css"
   },
   "dependencies": {
     "prettier": "^1.5.2",
@@ -12,6 +12,6 @@
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "react-dev-scripts": "link:.."
+    "dev-utils": "file:.."
   }
 }

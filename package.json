@@ -1,6 +1,10 @@
 {
   "private": true,
   "version": "0.0.0",
+  "name": "dev-utils",
+  "bin": {
+    "dev-utils": "bin/dev-utils.js"
+  },
   "scripts": {
     "lint:md": "markdownlint *.md",
     "lint": "eslint . --fix",
