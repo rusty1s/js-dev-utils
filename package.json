@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "lint:md": "markdownlint *.md",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"]
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
@@ -24,6 +28,8 @@
     "yargs-parser": "^7.0.0"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.1",
     "markdownlint-cli": "^0.3.1"
   }
 }
