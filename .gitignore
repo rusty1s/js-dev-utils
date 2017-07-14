@@ -1,3 +1,5 @@
 node_modules
 *.log
 *cache
+demo/.eslintrc
+demo/.stylelintrc

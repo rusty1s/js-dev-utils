@@ -1,16 +1,13 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-console.log(process.argv);
-
-const resolve = require('../helper/resolve');
-const { getRoot, getArgs } = require('../helper/process');
-const toJSON = require('../helper/json');
+const { addDotfile, removeDotfile } = require('../helper/dotfile');
+const { getArgs } = require('../helper/process');
 const run = require('../helper/run');
 
-const config = resolve('stylelintrc');
-const filepath = path.join(getRoot(), '.stylelintrc');
-fs.writeFileSync(filepath, toJSON(config));
+console.log(getArgs());
+
+addDotfile('stylelintrc');
+addDotfile('stylelintignore');
 const code = run('stylelint', getArgs());
+removeDotfile('stylelintignore');
 process.exit(code);

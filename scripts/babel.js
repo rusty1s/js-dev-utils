@@ -1,16 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
-const resolve = require('../helper/resolve');
-const { getRoot, getArgs } = require('../helper/process');
-const toJSON = require('../helper/json');
+const { addDotfile, removeDotfile } = require('../helper/dotfile');
+const { getArgs } = require('../helper/process');
 const run = require('../helper/run');
 
-const config = resolve('babelrc');
-const filepath = path.join(getRoot(), '.babelrc');
-fs.writeFileSync(filepath, toJSON(config));
+addDotfile('babelrc');
 const code = run('babel', getArgs());
-fs.unlinkSync(filepath);
+removeDotfile('babelrc');
 process.exit(code);

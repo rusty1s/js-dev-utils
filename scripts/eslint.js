@@ -1,15 +1,11 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
-const resolve = require('../helper/resolve');
-const { getRoot, getArgs } = require('../helper/process');
-const toJSON = require('../helper/json');
+const { addDotfile, removeDotfile } = require('../helper/dotfile');
+const { getArgs } = require('../helper/process');
 const run = require('../helper/run');
 
-const config = resolve('eslintrc');
-const filepath = path.join(getRoot(), '.eslintrc');
-fs.writeFileSync(filepath, toJSON(config));
+addDotfile('eslintrc');
+addDotfile('eslintignore');
 const code = run('eslint', getArgs());
+removeDotfile('eslintignore');
 process.exit(code);
