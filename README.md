@@ -1,11 +1,11 @@
-# React Development Scripts
+# Development Utils for JavaScript
 
 ```sh
-yarn add --dev react-dev-scripts
+yarn add --dev dev-utils
 ```
 
 ```sh
-npm install --save-dev react-dev-scripts
+npm install --save-dev dev-utils
 ```
 
 * [Babel CLI](https://babeljs.io/docs/usage/cli/)
