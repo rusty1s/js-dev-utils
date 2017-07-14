@@ -8,19 +8,18 @@ const { getRoot } = require("./resolve");
 const getArgs = () => process.argv.slice(2);
 
 const mergeArgs = (...args) => {
-  const allArgs = [].concat(...args);
-  const mergedArgs = Object.assign(...args.map(a => parse(a)));
+  const merged = Object.assign(...args.map(a => parse(a)));
+  console.log(merged);
 
-  return Object.keys(mergedArgs).reduce((acc, key) => {
-    const value = mergedArgs[key];
-
+  return Object.keys(merged).reduce((acc, key) => {
+    const value = merged[key];
     if (key === "_") return [...acc, ...value];
 
-    let newKey = key;
-    if (allArgs.includes(`-${key}`)) newKey = `-${key}`;
-    if (allArgs.includes(`--${key}`)) newKey = `--${key}`;
+    let k = key;
+    if (typeof value === "boolean" && !value) k = `no-${k}`;
 
-    const arg = typeof value === "boolean" ? [newKey] : [newKey, value];
+    k = k.length === 1 ? `-${k}` : `--${k}`;
+    const arg = typeof value === "boolean" ? [k] : [k, value];
     return [...acc, ...arg];
   }, []);
 };

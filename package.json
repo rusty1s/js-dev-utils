@@ -2,6 +2,7 @@
   "private": true,
   "version": "0.0.0",
   "name": "dev-utils",
+  "main": "index.js",
   "bin": {
     "dev-utils": "bin/dev-utils.js"
   },
