@@ -4,3 +4,4 @@ node_modules
 demo/.eslintrc
 demo/.prettierrc
 demo/.stylelintrc
+demo/dist

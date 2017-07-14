@@ -3,7 +3,7 @@
 const { addDotfile, removeDotfile } = require("../helper/dotfile");
 const { getArgs, mergeArgs, run } = require("../helper/cli");
 
-const defaultArgs = ["--ext", "js,jsx,es6", "--cache"];
+const defaultArgs = ["--ext", "js,jsx", "--cache"];
 
 addDotfile("eslintrc");
 addDotfile("prettierrc");

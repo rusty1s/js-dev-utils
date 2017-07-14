@@ -1,18 +1,17 @@
 {
   "private": true,
   "scripts": {
-    "postinstall": "dev-utils postinstall",
     "transpile": "dev-utils babel src",
     "lint:js": "dev-utils eslint . --fix",
-    "lint:css": "dev-utils stylelint **/*.css"
+    "lint:css": "dev-utils stylelint **/*.css",
+    "start": "node node_modules/dev-utils/scripts/start.js"
   },
   "dependencies": {
-    "prettier": "^1.5.2",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "dev-utils": "file:.."
+    "dev-utils": "link:.."
   }
 }

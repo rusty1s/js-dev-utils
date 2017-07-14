@@ -9,7 +9,7 @@ const resolve = name => {
   if (fs.existsSync(filename)) return filename;
 
   // Resolve standard configuration if config hasn't been overridden.
-  return `../config/${name}`;
+  return path.join(__dirname, "..", "config", `${name}.js`);
 };
 
 module.exports = { getRoot, resolve };
