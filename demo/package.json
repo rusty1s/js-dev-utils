@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "transpile": "node ../scripts/babel.js src",
-    "lint:js": "node ../scripts/eslint.js .",
+    "lint:js": "node ../scripts/eslint.js . --fix",
     "lint:css": "node ../scripts/stylelint.js **/*.css"
   },
   "dependencies": {
