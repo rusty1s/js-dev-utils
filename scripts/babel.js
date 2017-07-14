@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 const { addDotfile, removeDotfile } = require('../helper/dotfile');
-const { getArgs } = require('../helper/process');
-const run = require('../helper/run');
+const { getArgs, run } = require('../helper/cli');
 
 addDotfile('babelrc');
 const code = run('babel', getArgs());

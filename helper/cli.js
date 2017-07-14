@@ -1,7 +1,9 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
 
-const { getRoot } = require('./process');
+const { getRoot } = require('./resolve');
+
+const getArgs = () => process.argv.slice(2);
 
 // TODO: Default props.
 const run = (cmd, args = []) =>
@@ -9,4 +11,4 @@ const run = (cmd, args = []) =>
     stdio: 'inherit',
   }).status;
 
-module.exports = run;
+module.exports = { getArgs, run };
