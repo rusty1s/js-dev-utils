@@ -16,9 +16,9 @@ const call = (script, args) =>
     encoding: "utf-8"
   });
 
+/* istanbul ignore if */
 if (require.main === module) {
   // Called as CLI.
-  // istanbul ignore next
   const script = process.argv[2] || "";
 
   if (!getScripts().includes(script)) {
