@@ -1,16 +1,12 @@
 sudo: false
 node_js:
-  - 4
-  - 5
-  - 6
-  - 7
   - 8
-  - stable
-  - iojs
 cache:
   yarn: true
   directories:
     - node_modules
+install:
+  - yarn
 script:
   - yarn lint:md
   - yarn lint:js
