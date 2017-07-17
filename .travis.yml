@@ -6,15 +6,11 @@ cache:
     - node_modules
 notifications:
   email: false
-os:
-  - linux
-  - osx
 node_js:
   - 6
   - 7
   - 8
   - stable
-  - iojs
 before-script:
   - yarn global add codecov
   - yarn
