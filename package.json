@@ -8,14 +8,18 @@
   },
   "scripts": {
     "lint:md": "markdownlint *.md",
-    "lint": "eslint . --fix",
+    "lint:js": "eslint . --fix",
     "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
+      "yarn lint:js",
       "git add",
       "jest --bail --findRelatedTests"
+    ],
+    "*.md": [
+      "yarn lint:md",
+      "git add"
     ]
   },
   "dependencies": {
