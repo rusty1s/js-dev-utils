@@ -20,6 +20,8 @@ before-script:
   - yarn global add codecov
   - yarn
 script:
+  - node --version
+  - yarn --version
   - yarn lint:md
   - yarn lint:js
   - yarn test
