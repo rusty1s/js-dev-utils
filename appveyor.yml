@@ -1,0 +1,19 @@
+---
+environement:
+  matrix:
+    - nodejs_version: 6
+    - nodejs_version: 7
+    - nodejs_version: 8
+cache:
+  - "%LOCALAPPDATA%\\Yarn"
+  - node_modules
+
+install:
+  - yarn
+
+test_script:
+  - yarn lint:md
+  - yarn lint:js
+  - yarn test
+
+build: off
