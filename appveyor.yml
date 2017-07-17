@@ -1,4 +1,3 @@
----
 environement:
   matrix:
     - nodejs_version: "6"
@@ -7,16 +6,13 @@ environement:
 cache:
   - "%LOCALAPPDATA%\\Yarn"
   - node_modules
-
 install:
   - ps: Install-Product node $env:nodejs_version
   - yarn
-
 test_script:
   - node --version
   - yarn --version
   - yarn lint:md
   - yarn lint:js
   - yarn test
-
 build: off
