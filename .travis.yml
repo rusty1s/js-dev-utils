@@ -10,8 +10,6 @@ node_js:
   - 6
   - 8
   - stable
-install:
-  npm install --global codecov
 before-script:
   - yarn
 script:
@@ -19,4 +17,5 @@ script:
   - yarn lint:js
   - yarn test
 after_success:
-  - codecov
+  - yarn add codecov
+  - yarn codecov
