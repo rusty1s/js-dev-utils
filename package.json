@@ -7,6 +7,7 @@
     "dev-utils": "bin/dev-utils.js"
   },
   "scripts": {
+    "test": "jest --coverage",
     "lint:md": "markdownlint *.md",
     "lint:js": "eslint . --fix",
     "precommit": "lint-staged"
