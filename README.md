@@ -4,7 +4,7 @@
 |-------------|:-------:|
 | [![Build Status](https://travis-ci.org/rusty1s/dev-utils.svg)](https://travis-ci.org/rusty1s/dev-utils) | [![Build Status](https://ci.appveyor.com/api/projects/status/github/rusty1s/dev-utils?svg=true)](https://ci.appveyor.com/project/rusty1s/dev-utils) |
 
-[![Code Coverage](https://img.shields.io/codecov/c/github/rusty1s/dev-utils.svg)](https://codecov.io/github/rusty1s/dev-utils)
+[![Code Coverage](https://codecov.io/gh/rusty1s/dev-utils/branch/master/graph/badge.svg)](https://codecov.io/github/rusty1s/dev-utils)
 [![Code Climate](https://codeclimate.com/github/rusty1s/dev-utils/badges/gpa.svg)](https://codeclimate.com/github/rusty1s/dev-utils)
 [![Code Climate Issues](https://codeclimate.com/github/rusty1s/dev-utils/badges/issue_count.svg)](https://codeclimate.com/github/rusty1s/dev-utils/issues)
 

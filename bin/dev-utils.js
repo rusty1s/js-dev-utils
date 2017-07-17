@@ -16,8 +16,8 @@ const call = (script, args) =>
     encoding: "utf-8"
   });
 
-// Called as CLI.
 if (require.main === module) {
+  // Called as CLI.
   const script = process.argv[2] || "";
 
   if (!getScripts().includes(script)) {
