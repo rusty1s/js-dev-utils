@@ -1,11 +1,15 @@
 sudo: false
-node_js:
-  - 8
+language: node_js
 cache:
   yarn: true
   directories:
     - node_modules
-install:
+notifications:
+  email: false
+node_js:
+  - 8
+before-script:
+  - yarn global add codecov
   - yarn
 script:
   - yarn lint:md
@@ -13,5 +17,3 @@ script:
   - yarn test
 after_success:
   - codecov
-notifications:
-  email: false
