@@ -7,7 +7,13 @@ cache:
 notifications:
   email: false
 node_js:
+  - 4
+  - 5
+  - 6
+  - 7
   - 8
+  - stable
+  - iojs
 before-script:
   - yarn global add codecov
   - yarn
