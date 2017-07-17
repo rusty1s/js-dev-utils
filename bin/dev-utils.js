@@ -18,6 +18,7 @@ const call = (script, args) =>
 
 if (require.main === module) {
   // Called as CLI.
+  // istanbul ignore next
   const script = process.argv[2] || "";
 
   if (!getScripts().includes(script)) {
