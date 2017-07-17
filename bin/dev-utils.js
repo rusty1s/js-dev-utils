@@ -20,5 +20,5 @@ if (scripts.includes(script)) {
   );
 }
 
-console.error(`Unknown script "${script}".`);
+process.stderr.write(`Unknown script "${script}".`);
 process.exit(1);
