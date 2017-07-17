@@ -35,7 +35,8 @@ const run = (cmd, args = []) =>
     "node",
     [path.join(getRoot(), "node_modules", ".bin", cmd), ...args],
     {
-      stdio: "inherit"
+      stdio: "inherit",
+      encoding: "utf-8"
     }
   ).status;
 

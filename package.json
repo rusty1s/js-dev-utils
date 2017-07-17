@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "lint:md": "markdownlint README.md",
+    "lint:md": "markdownlint *.md",
     "lint:js": "eslint . --fix",
     "precommit": "lint-staged"
   },

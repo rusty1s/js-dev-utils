@@ -1,6 +1,21 @@
 const path = require("path");
 const { spawnSync } = require("child_process");
 
+const { getScripts } = require("./dev-utils");
+
+test("get scripts", () => {
+  const scripts = getScripts();
+
+  expect(scripts).toHaveLength(5);
+  expect(scripts).toMatchObject([
+    "babel",
+    "eslint",
+    "postinstall",
+    "start",
+    "stylelint"
+  ]);
+});
+
 test("blabla", () => {
   const result = spawnSync("node", [path.join(__dirname, "dev-utils.js")], {
     stdio: "pipe",
