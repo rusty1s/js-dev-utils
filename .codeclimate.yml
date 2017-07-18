@@ -1,0 +1,28 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - javascript
+  eslint:
+    enabled: true
+    config:
+      config: ".eslintrc"
+      extensions:
+        - .js
+        - .jsx
+    checks:
+      complexity:
+        enabled: true
+  csslint:
+    enabled: true
+  fixme:
+    enabled: true
+  markdownlint:
+    enabled: true
+ratings:
+  paths:
+    - "**.js"
+    - "**.jsx"
+    - "**.css"
+    - "**.md"
