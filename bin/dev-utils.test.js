@@ -1,7 +1,7 @@
 const path = require("path");
 const { spawnSync } = require("child_process");
 
-const { getScripts } = require("./dev-utils");
+const { getScripts, call } = require("./dev-utils");
 
 test("get scripts", () => {
   const scripts = getScripts();
@@ -16,7 +16,14 @@ test("get scripts", () => {
   ]);
 });
 
-test("blabla", () => {
+test("call script", () => {
+  const result = call("babel", ["foo.js"]);
+
+  expect(result.status).toBe(2);
+  expect(result.stderr).toBe("foo.js doesn't exist\n");
+});
+
+test("call with empty script", () => {
   const result = spawnSync("node", [path.join(__dirname, "dev-utils.js")], {
     stdio: "pipe",
     encoding: "utf-8"
@@ -24,10 +31,10 @@ test("blabla", () => {
 
   expect(result.status).toBe(1);
   expect(result.stdout).toBe("");
-  expect(result.stderr).toBe('Unknown script "".');
+  expect(result.stderr).toBe('"" doesn\'t exist\n');
 });
 
-test("blabla", () => {
+test("call with wrong script", () => {
   const result = spawnSync(
     "node",
     [path.join(__dirname, "dev-utils.js"), "unknown"],
@@ -36,5 +43,5 @@ test("blabla", () => {
 
   expect(result.status).toBe(1);
   expect(result.stdout).toBe("");
-  expect(result.stderr).toBe('Unknown script "unknown".');
+  expect(result.stderr).toBe('"unknown" doesn\'t exist\n');
 });

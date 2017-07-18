@@ -12,7 +12,7 @@ const getScripts = () =>
 
 const call = (script, args) =>
   spawnSync("node", [require.resolve(`../scripts/${script}.js`), ...args], {
-    stdio: "inherit",
+    stdio: "pipe",
     encoding: "utf-8"
   });
 
@@ -22,7 +22,7 @@ if (require.main === module) {
   const script = process.argv[2] || "";
 
   if (!getScripts().includes(script)) {
-    process.stderr.write(`Unknown script "${script}".`);
+    console.error(`"${script}" doesn't exist`);
     process.exit(1);
   }
   process.exit(call(script, process.argv.slice(3)).status);
