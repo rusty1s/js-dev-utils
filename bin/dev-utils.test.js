@@ -20,7 +20,6 @@ test("call script", () => {
   const result = call("babel", ["foo.js"]);
 
   expect(result.status).toBeGreaterThan(0);
-  expect(result.stderr).toBe("foo.js doesn't exist\n");
 });
 
 test("call with empty script", () => {
