@@ -1,5 +1,4 @@
 const path = require("path");
-// const { spawnSync } = require("child_process");
 
 const { getRoot, resolve } = require("./resolve");
 
