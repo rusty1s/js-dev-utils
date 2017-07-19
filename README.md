@@ -1,4 +1,7 @@
-# Development Utils for JavaScript [![Code Coverage](https://codecov.io/gh/rusty1s/dev-utils/branch/master/graph/badge.svg)](https://codecov.io/github/rusty1s/dev-utils) [![Code Climate](https://codeclimate.com/github/rusty1s/dev-utils/badges/gpa.svg)](https://codeclimate.com/github/rusty1s/dev-utils)
+# ![Development Utilities for JavaScript](https://user-images.githubusercontent.com/6945922/28385763-88dfedda-6cc9-11e7-8228-038b1b6caee7.png)
+
+[![Code Coverage](https://codecov.io/gh/rusty1s/dev-utils/branch/master/graph/badge.svg)](https://codecov.io/github/rusty1s/dev-utils)
+[![Code Climate](https://codeclimate.com/github/rusty1s/dev-utils/badges/gpa.svg)](https://codeclimate.com/github/rusty1s/dev-utils)
 
 | Linux/MacOS | Windows |
 |-------------|:-------:|
