@@ -1,17 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "transpile": "dev-utils babel src",
-    "lint:js": "dev-utils eslint . --fix",
-    "lint:css": "dev-utils stylelint **/*.css",
-    "start": "node node_modules/dev-utils/scripts/start.js"
+    "postinstall": "node ../scripts/postinstall.js",
+    "transpile": "node ../scripts/babel.js src",
+    "lint:js": "node ../scripts/eslint.js . --fix",
+    "lint:css": "node ../scripts/stylelint **/*.css",
+    "start": "node ../scripts/start.js"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
-  },
-  "devDependencies": {
-    "dev-utils": "link:.."
   }
 }

@@ -7,6 +7,7 @@
     "dev-utils": "bin/dev-utils.js"
   },
   "scripts": {
+    "postinstall": "cd demo && yarn",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint:md": "markdownlint README.md",
