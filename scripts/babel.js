@@ -3,9 +3,9 @@
 const { addDotfile, removeDotfile } = require("../helper/dotfile");
 const { getArgs, run } = require("../helper/cli");
 
-const call = args => {
+const call = (args, options) => {
   addDotfile("babelrc");
-  const result = run("babel", args);
+  const result = run("babel", args, options);
   removeDotfile("babelrc");
   return result;
 };

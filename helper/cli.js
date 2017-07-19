@@ -30,14 +30,18 @@ const mergeArgs = (...args) => {
   }, []);
 };
 
-const run = (cmd, args = []) =>
+const run = (cmd, args = [], options = {}) =>
   spawnSync(
     "node",
     [path.join(getRoot(), "node_modules", ".bin", cmd), ...args],
-    {
-      stdio: "pipe",
-      encoding: "utf-8"
-    }
+    Object.assign(
+      {},
+      {
+        stdio: "inherit",
+        encoding: "utf-8"
+      },
+      options
+    )
   );
 
 module.exports = { getArgs, mergeArgs, run };
