@@ -6,14 +6,15 @@ const { getScripts, call } = require("./dev-utils");
 test("get scripts", () => {
   const scripts = getScripts();
 
-  expect(scripts).toHaveLength(6);
+  expect(scripts).toHaveLength(7);
   expect(scripts).toMatchObject([
     "babel",
     "eslint",
+    "jest",
     "markdownlint",
     "postinstall",
-    "start",
-    "stylelint"
+    "stylelint",
+    "webpack"
   ]);
 });
 

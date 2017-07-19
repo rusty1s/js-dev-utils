@@ -3,7 +3,13 @@
 const { addDotfile, removeDotfile } = require("../helper/dotfile");
 const { getArgs, run } = require("../helper/cli");
 
-addDotfile("babelrc");
-const code = run("babel", getArgs());
-removeDotfile("babelrc");
-process.exit(code);
+const call = args => {
+  addDotfile("babelrc");
+  const result = run("babel", args);
+  removeDotfile("babelrc");
+  return result;
+};
+
+/* istanbul ignore if */
+if (require.main === module) process.exit(call(getArgs()).status);
+else module.exports = call;

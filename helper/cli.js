@@ -35,9 +35,9 @@ const run = (cmd, args = []) =>
     "node",
     [path.join(getRoot(), "node_modules", ".bin", cmd), ...args],
     {
-      stdio: "inherit",
+      stdio: "pipe",
       encoding: "utf-8"
     }
-  ).status;
+  );
 
 module.exports = { getArgs, mergeArgs, run };
