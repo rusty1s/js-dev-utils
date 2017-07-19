@@ -5,7 +5,7 @@
     "transpile": "node ../scripts/babel.js src",
     "lint:js": "node ../scripts/eslint.js . --fix",
     "lint:css": "node ../scripts/stylelint **/*.css",
-    "start": "node ../scripts/start.js"
+    "start": "node ../scripts/webpack.js prod"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
