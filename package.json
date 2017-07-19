@@ -8,6 +8,7 @@
   },
   "scripts": {
     "postinstall": "cd demo && yarn",
+    "demotest:watch": "cd demo && jest --watchAll",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
     "lint:md": "markdownlint README.md",
