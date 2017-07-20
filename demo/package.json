@@ -14,6 +14,6 @@
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "dev-utils": "link:.."
+    "dev-utils": "file:.."
   }
 }
