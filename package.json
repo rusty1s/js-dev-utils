@@ -14,12 +14,6 @@
     "lint:js": "eslint . --fix",
     "precommit": "lint-staged"
   },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/demo/"
-    ]
-  },
   "lint-staged": {
     "*.js": [
       "yarn lint:js",
