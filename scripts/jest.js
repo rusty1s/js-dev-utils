@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
-const { getArgs, run } = require("../helper/cli");
+const { getArgs, mergeArgs, run } = require("../helper/cli");
+const { resolve } = require("../helper/resolve");
 
-const result = run("jest", getArgs());
+const defaultArgs = ["--config", resolve("jest.config")];
+
+const result = run("jest", mergeArgs(defaultArgs, getArgs()));
 process.exit(result.status);
