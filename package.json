@@ -8,9 +8,8 @@
   },
   "scripts": {
     "postinstall": "cd demo && yarn",
-    "demotest:watch": "cd demo && jest --watchAll",
-    "test": "jest --coverage",
-    "test:watch": "jest --watchAll",
+    "test": "cd demo && jest",
+    "test:watch": "cd demo && jest --watchAll",
     "lint:md": "markdownlint README.md",
     "lint:js": "eslint . --fix",
     "precommit": "lint-staged"
@@ -25,7 +24,7 @@
     "*.js": [
       "yarn lint:js",
       "git add",
-      "jest --bail --findRelatedTests"
+      "yarn test -- --bail --findRelatedTests"
     ],
     "*.md": [
       "yarn lint:md",
