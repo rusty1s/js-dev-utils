@@ -41,16 +41,16 @@
     "find-package-json": "^1.0.0",
     "jest": "^20.0.4",
     "markdownlint-cli": "^0.3.1",
-    "prettier": "^1.5.2",
-    "stylelint": "^7.13.0",
-    "stylelint-config-css-modules": "^1.0.0",
-    "stylelint-config-standard": "^16.0.0",
-    "webpack": "^3.2.0",
+    "prettier": "^1.5.3",
+    "stylelint": "^8.0.0",
+    "stylelint-config-css-modules": "^1.1.0",
+    "stylelint-config-standard": "^17.0.0",
+    "webpack": "^3.3.0",
     "webpack-merge": "^4.1.0",
     "yargs-parser": "^7.0.0"
   },
   "devDependencies": {
     "husky": "^0.14.3",
-    "lint-staged": "^4.0.1"
+    "lint-staged": "^4.0.2"
   }
 }
