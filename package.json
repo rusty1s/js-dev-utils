@@ -1,7 +1,7 @@
 {
   "private": true,
   "version": "0.0.0",
-  "name": "dev-utils",
+  "name": "js-dev-utils",
   "main": "index.js",
   "bin": {
     "dev-utils": "bin/dev-utils.js"
@@ -38,7 +38,7 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "^7.1.0",
-    "find-package-json": "^1.0.0",
+    "find-root": "^1.1.0",
     "jest": "^20.0.4",
     "markdownlint-cli": "^0.3.1",
     "prettier": "^1.5.3",

@@ -1,9 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 
-const finder = require("find-package-json");
+const findRoot = require("find-root");
 
-const getRoot = () => finder(process.cwd()).next().value;
+const getRoot = () => findRoot(process.cwd());
 
 const resolve = name => {
   // Look up config in root directory to check for overridden files.
