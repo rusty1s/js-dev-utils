@@ -11,11 +11,11 @@
 ## Install
 
 ```sh
-yarn add --dev dev-utils
+yarn add --dev js-dev-utils
 ```
 
 ```sh
-npm install --save-dev dev-utils
+npm install --save-dev js-dev-utils
 ```
 
 ## Usage
