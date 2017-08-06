@@ -4,7 +4,7 @@
   "name": "js-dev-utils",
   "main": "index.js",
   "bin": {
-    "dev-utils": "bin/dev-utils.js"
+    "js-dev-utils": "bin/js-dev-utils.js"
   },
   "scripts": {
     "postinstall": "cd demo && yarn",
