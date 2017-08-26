@@ -1,9 +1,9 @@
-const path = require("path");
-const { spawnSync } = require("child_process");
+const path = require('path');
+const { spawnSync } = require('child_process');
 
-const parse = require("yargs-parser");
+const parse = require('yargs-parser');
 
-const { getRoot } = require("./resolve");
+const { getRoot } = require('./resolve');
 
 const getArgs = () => process.argv.slice(2);
 
@@ -16,31 +16,31 @@ const mergeArgs = (...args) => {
     const value = merged[key];
 
     // Pass values with no given key.
-    if (key === "_") return [...acc, ...value];
+    if (key === '_') return [...acc, ...value];
 
     // Invert argument if the value is `false`.
-    if (typeof value === "boolean" && !value) k = `no-${k}`;
+    if (typeof value === 'boolean' && !value) k = `no-${k}`;
 
     // Prepend - or -- to key to reconstruct arguments.
     k = k.length === 1 ? `-${k}` : `--${k}`;
 
     // Construct single or value argument.
-    const arg = typeof value === "boolean" ? [k] : [k, value];
+    const arg = typeof value === 'boolean' ? [k] : [k, value];
     return [...acc, ...arg];
   }, []);
 };
 
 const run = (cmd, args = [], options = {}) =>
   spawnSync(
-    "node",
-    [path.join(getRoot(), "node_modules", ".bin", cmd), ...args],
+    'node',
+    [path.join(getRoot(), 'node_modules', '.bin', cmd), ...args],
     Object.assign(
       {
-        stdio: "inherit",
-        encoding: "utf-8"
+        stdio: 'inherit',
+        encoding: 'utf-8',
       },
-      options
-    )
+      options,
+    ),
   );
 
 module.exports = { getArgs, mergeArgs, run };

@@ -2,7 +2,19 @@
   "extends": ["airbnb-base", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "useTabs": false,
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "backetSpacing": true,
+        "jsxBracketSameLine": false
+      }
+    ],
     "global-require": 0,
     "import/no-dynamic-require": 0,
     "no-console": 0

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const { addDotfile } = require("../helper/dotfile");
+const { addDotfile } = require('../helper/dotfile');
 
-addDotfile("eslintrc");
-addDotfile("prettierrc");
-addDotfile("stylelintrc");
+addDotfile('eslintrc');
+addDotfile('prettierrc');
+addDotfile('stylelintrc');

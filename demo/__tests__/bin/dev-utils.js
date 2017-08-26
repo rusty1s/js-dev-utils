@@ -1,2 +1,1 @@
-test("dev-utils", () => {
-});
+test('dev-utils', () => {});
