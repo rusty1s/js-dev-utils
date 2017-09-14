@@ -18,7 +18,7 @@ module.exports = {
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devtool: 'cheap-module-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'dist'),
     port: 3000,
     hot: true,
   },
