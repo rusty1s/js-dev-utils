@@ -39,8 +39,8 @@ const run = (cmd, args = [], options = {}) =>
         stdio: 'inherit',
         encoding: 'utf-8',
       },
-      options,
-    ),
+      options
+    )
   );
 
 module.exports = { getArgs, mergeArgs, run };

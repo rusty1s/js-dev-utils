@@ -7,6 +7,7 @@ const stylelintignore = require('./config/stylelintignore');
 const common = require('./config/webpack.common');
 const dev = require('./config/webpack.dev');
 const prod = require('./config/webpack.prod');
+const postcss = require('./config/postcss.config');
 
 module.exports = {
   babelrc,
@@ -16,4 +17,5 @@ module.exports = {
   stylelintrc,
   stylelintignore,
   webpack: { common, dev, prod },
+  postcss,
 };
