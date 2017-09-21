@@ -34,13 +34,7 @@ const run = (cmd, args = [], options = {}) =>
   spawnSync(
     'node',
     [path.join(getRoot(), 'node_modules', '.bin', cmd), ...args],
-    Object.assign(
-      {
-        stdio: 'inherit',
-        encoding: 'utf-8',
-      },
-      options
-    )
+    { ...options, stdio: 'inherit', encodig: 'utf-8' }
   );
 
 module.exports = { getArgs, mergeArgs, run };

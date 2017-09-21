@@ -25,7 +25,8 @@ if (require.main === module) {
     console.error(`"${script}" doesn't exist`);
     process.exit(1);
   }
-  process.exit(call(script, process.argv.slice(3)).status);
+  const code = call(script, process.argv.slice(3)).status;
+  process.exit(code);
 } else {
   module.exports = { getScripts, call };
 }

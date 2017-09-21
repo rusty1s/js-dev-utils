@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
+const path = require('path');
+
 const { getArgs, mergeArgs, run } = require('../helper/cli');
-const resolve = require('../helper/resolve');
 
 const [env, ...args] = getArgs();
 
-const defaultArgs = ['--config', resolve(`webpack.${env}`)];
+const defaultArgs = ['--config', path.join(__dirname, '..', 'webpack', env)];
 
 const code = run('webpack', mergeArgs(defaultArgs, args));
 process.exit(code);
