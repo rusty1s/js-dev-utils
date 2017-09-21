@@ -3,5 +3,6 @@
 const { addDotfile } = require('../helper/dotfile');
 
 addDotfile('eslintrc');
-addDotfile('prettierrc');
 addDotfile('stylelintrc');
+addDotfile('prettierrc');
+addDotfile('markdownlintrc');
