@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 
-const { addDotfile, removeDotfile } = require('../helper/dotfile');
+const {
+  addDotfile,
+  addIgnoreDotfile,
+  removeDotfile,
+} = require('../helper/dotfile');
 const { getArgs, run } = require('../helper/cli');
 
 addDotfile('stylelintrc');
-addDotfile('stylelintignore');
+addIgnoreDotfile('stylelintignore');
 const code = run('stylelint', getArgs());
 removeDotfile('stylelintignore');
 process.exit(code);

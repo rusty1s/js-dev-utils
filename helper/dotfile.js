@@ -10,6 +10,8 @@ const addDotfile = name =>
     JSON.stringify(require(resolve(name)), null, 2)
   );
 
+const addIgnoreDotfile = name => name;
+
 const removeDotfile = name => fs.unlinkSync(path.join(getRoot(), `.${name}`));
 
-module.exports = { addDotfile, removeDotfile };
+module.exports = { addDotfile, addIgnoreDotfile, removeDotfile };
