@@ -14,7 +14,7 @@ const call = (script, args) =>
   spawnSync('node', [require.resolve(`../scripts/${script}.js`), ...args], {
     stdio: 'pipe',
     encoding: 'utf-8',
-  });
+  }).status;
 
 /* istanbul ignore if */
 if (require.main === module) {
@@ -25,7 +25,7 @@ if (require.main === module) {
     console.error(`"${script}" doesn't exist`);
     process.exit(1);
   }
-  const code = call(script, process.argv.slice(3)).status;
+  const code = call(script, process.argv.slice(3));
   process.exit(code);
 } else {
   module.exports = { getScripts, call };

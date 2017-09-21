@@ -2,6 +2,7 @@
 
 const { addDotfile } = require('../helper/dotfile');
 
+addDotfile('babelrc');
 addDotfile('eslintrc');
 addDotfile('stylelintrc');
 addDotfile('prettierrc');
