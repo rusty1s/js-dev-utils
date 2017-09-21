@@ -1,9 +1,21 @@
+const fs = require('fs');
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const getRoot = require('../helper/root');
+
+const getEntry = () => {
+  const entries = ['index.js', 'index.jsx', 'src/index.js', 'src/index.jsx'];
+  let entry;
+  entries.forEach(e => {
+    if (fs.existsSync(path.join(getRoot(), entry))) entry = `./${e}`;
+  });
+  return entry;
+};
+
 module.exports = {
-  entry: './src/index.jsx',
+  entry: getEntry(),
   output: {
     filename: 'app.js',
     path: path.join(__dirname, 'dist'),
