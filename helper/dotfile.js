@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const { getRoot, resolve } = require('./resolve');
+const getRoot = require('./root');
+const resolve = require('./resolve');
 
 const addDotfile = name =>
   fs.writeFileSync(

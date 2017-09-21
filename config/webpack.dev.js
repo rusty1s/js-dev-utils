@@ -2,7 +2,7 @@ const path = require('path');
 
 const webpack = require('webpack');
 
-const { resolve } = require('../helper/resolve');
+const resolve = require('../helper/resolve');
 
 const cssLoader = require(resolve('css-loader'));
 

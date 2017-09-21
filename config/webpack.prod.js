@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const { resolve } = require('../helper/resolve');
+const resolve = require('../helper/resolve');
 
 const cssLoader = require(resolve('css-loader'));
 

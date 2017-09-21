@@ -1,4 +1,4 @@
-const { resolve } = require('../helper/resolve');
+const resolve = require('../helper/resolve');
 
 module.exports = {
   extends: ['airbnb', 'prettier'],

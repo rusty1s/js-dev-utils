@@ -1,21 +1,27 @@
-const babelrc = require('./config/babelrc');
-const eslintrc = require('./config/eslintrc');
+const babel = require('./config/babelrc');
+const cssLoader = require('./config/css-loader');
 const eslintignore = require('./config/eslintignore');
-const prettierrc = require('./config/prettierrc');
-const stylelintrc = require('./config/stylelintrc');
+const eslint = require('./config/eslintrc');
+const jest = require('./config/jest.config');
+const markdown = require('./config/markdownlintrc');
+const postcss = require('./config/postcss.config');
+const prettier = require('./config/prettierrc');
 const stylelintignore = require('./config/stylelintignore');
+const stylelint = require('./config/stylelintrc');
 const common = require('./config/webpack.common');
 const dev = require('./config/webpack.dev');
 const prod = require('./config/webpack.prod');
-const postcss = require('./config/postcss.config');
 
 module.exports = {
-  babelrc,
-  eslintrc,
+  babel,
+  cssLoader,
   eslintignore,
-  prettierrc,
-  stylelintrc,
-  stylelintignore,
-  webpack: { common, dev, prod },
+  eslint,
+  jest,
+  markdown,
   postcss,
+  prettier,
+  stylelintignore,
+  stylelint,
+  webpack: { common, dev, prod },
 };

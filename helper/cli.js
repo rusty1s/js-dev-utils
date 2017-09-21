@@ -3,7 +3,7 @@ const { spawnSync } = require('child_process');
 
 const parse = require('yargs-parser');
 
-const { getRoot } = require('./resolve');
+const getRoot = require('./root');
 
 const getArgs = () => process.argv.slice(2);
 

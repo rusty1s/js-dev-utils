@@ -1,9 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const findRoot = require('find-root');
-
-const getRoot = () => findRoot(process.cwd());
+const getRoot = require('./root');
 
 const resolve = name => {
   // Look up config in root directory to check for overridden files.
@@ -14,4 +12,4 @@ const resolve = name => {
   return path.join(__dirname, '..', 'config', `${name}.js`);
 };
 
-module.exports = { getRoot, resolve };
+module.exports = resolve;
