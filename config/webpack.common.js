@@ -6,7 +6,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const getRoot = require('../helper/root');
 
 const getEntry = () => {
-  const entries = ['index.js', 'index.jsx', 'src/index.js', 'src/index.jsx'];
+  const entries = [
+    'index.js',
+    'index.jsx',
+    'src/index.js',
+    'src/index.jsx',
+    'demo/index.js',
+    'demo/index.jsx',
+  ];
+
   let entry;
   entries.forEach(e => {
     if (fs.existsSync(path.join(getRoot(), entry))) entry = `./${e}`;
