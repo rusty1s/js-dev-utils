@@ -10,7 +10,11 @@ const addDotfile = name =>
     JSON.stringify(require(resolve(name)), null, 2)
   );
 
-const addIgnoreDotfile = name => name;
+const addIgnoreDotfile = name =>
+  fs.writeFileSync(
+    path.join(getRoot(), `.${name}`),
+    require(resolve(name)).reduce((prev, entry) => `${prev}\n${entry}`)
+  );
 
 const removeDotfile = name => fs.unlinkSync(path.join(getRoot(), `.${name}`));
 
