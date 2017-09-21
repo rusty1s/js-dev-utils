@@ -1,10 +1,12 @@
 const resolve = require('../helper/resolve');
 
+const prettier = require(resolve('prettierrc'));
+
 module.exports = {
   extends: ['airbnb', 'prettier'],
   plugins: ['prettier'],
   rules: {
-    'prettier/prettier': ['error', resolve('prettierrc')],
+    'prettier/prettier': ['error', prettier],
   },
   env: {
     node: true,
