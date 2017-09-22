@@ -22,5 +22,6 @@ module.exports = {
     contentBase: path.join(getRoot(), 'dist'),
     port: 3000,
     hot: true,
+    open: true,
   },
 };
