@@ -1,5 +1,4 @@
 {
-  "private": true,
   "version": "0.0.0",
   "name": "js-dev-utils",
   "main": "index.js",
@@ -15,14 +14,8 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
-      "yarn lint:js",
-      "git add"
-    ],
-    "*.md": [
-      "yarn lint:md",
-      "git add"
-    ]
+    "*.js": ["yarn lint:js", "git add"],
+    "*.md": ["yarn lint:md", "git add"]
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
