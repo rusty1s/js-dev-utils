@@ -7,18 +7,21 @@ const getRoot = require('../helper/root');
 
 const getEntry = () => {
   const entries = [
-    'index.js',
-    'index.jsx',
-    'src/index.js',
-    'src/index.jsx',
-    'demo/index.js',
     'demo/index.jsx',
+    'demo/index.js',
+    'src/index.jsx',
+    'src/index.js',
+    'index.jsx',
+    'index.js',
   ];
 
   let entry;
+
   entries.forEach(e => {
-    if (fs.existsSync(path.join(getRoot(), entry))) entry = `./${e}`;
+    const filepath = path.join(getRoot(), e);
+    if (fs.existsSync(filepath)) entry = `./${e}`;
   });
+
   return entry;
 };
 
