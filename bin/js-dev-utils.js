@@ -12,7 +12,7 @@ const getScripts = () =>
 
 const call = (script, args) =>
   spawnSync('node', [require.resolve(`../scripts/${script}.js`), ...args], {
-    stdio: 'pipe',
+    stdio: 'inherit',
     encoding: 'utf-8',
   }).status;
 
