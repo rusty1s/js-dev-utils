@@ -1,5 +1,7 @@
 const resolve = require('../helper/resolve');
 
+const postcss = resolve('postcss.config');
+
 module.exports = [
   {
     loader: 'css-loader',
@@ -10,5 +12,5 @@ module.exports = [
       localIdentName: '[name]__[local]___[hash:base64:5]',
     },
   },
-  { loader: 'postcss-loader', options: { config: resolve('postcss.config') } },
+  { loader: 'postcss-loader', options: { config: { path: postcss } } },
 ];
