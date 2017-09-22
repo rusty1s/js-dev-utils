@@ -21,7 +21,7 @@ switch (env) {
     code = run('webpack-dev-server', mergeArgs(defaultArgs, args));
     break;
   case 'prod':
-    code = run('webpack-dev-server', mergeArgs(defaultArgs, args));
+    code = run('webpack', mergeArgs(defaultArgs, args));
     break;
   default:
     console.error(`"${env}" config doesn't exist for webpack`);
