@@ -26,7 +26,7 @@ module.exports = {
   entry: getEntry(),
   output: {
     filename: 'app.js',
-    path: path.join(__dirname, 'dist'),
+    path: path.join(getRoot(), 'dist'),
   },
   resolve: {
     extensions: ['.js', '.jsx'],
