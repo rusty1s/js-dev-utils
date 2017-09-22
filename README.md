@@ -1,5 +1,6 @@
 # ![Development Utilities for JavaScript](https://user-images.githubusercontent.com/6945922/28385763-88dfedda-6cc9-11e7-8228-038b1b6caee7.png)
 
+[![NPM](https://badge.fury.io/js/js-dev-utils.svg)](https://www.npmjs.com/package/js-dev-utils)
 [![Code Coverage](https://codecov.io/gh/rusty1s/js-dev-utils/branch/master/graph/badge.svg)](https://codecov.io/github/rusty1s/js-dev-utils)
 [![Code Climate](https://codeclimate.com/github/rusty1s/js-dev-utils/badges/gpa.svg)](https://codeclimate.com/github/rusty1s/js-dev-utils)
 [![Code Climate Issues](https://codeclimate.com/github/rusty1s/js-dev-utils/badges/issue_count.svg)](https://codeclimate.com/github/rusty1s/js-dev-utils/issues)
